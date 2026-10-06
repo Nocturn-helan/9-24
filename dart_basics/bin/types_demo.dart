@@ -13,19 +13,18 @@ void runTypesDemo() {
   print('数学 $math 分，英语 $english 分，两门总分 ${math + english} 分');
 
   print('========== 3. 空安全四件套 ==========');
-  // (1) ? 可空类型：允许变量为 null
+
   String? nickname;
   print('未赋值时的昵称: $nickname'); // null
   nickname = '明明';
 
-  // (2) ?? 空合并运算符：为 null 时取默认值
+
   print('显示名: ${nickname ?? '匿名同学'}');
 
-  // (3) ?. 安全调用：对象为 null 时不报错，整体结果为 null
+
   String? major;
   print('未选专业，专业名长度: ${major?.length}'); // null
 
-  // (4) ! 强制解包：确信不为 null 时使用，为 null 会抛异常
   major = '软件工程';
   print('已选专业 $major，专业名长度: ${major!.length}');
 }
